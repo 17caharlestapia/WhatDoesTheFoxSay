@@ -1,0 +1,60 @@
+import java.util.*;
+import java.io.*;
+public class WhatDoesTheFoxSay 
+{
+	public static void main(String[] args)  throws IOException
+	{
+		BufferedReader in = new BufferedReader (new FileReader("InputFile.txt"));  
+		//  Created FileReader to read the input 
+		
+		String Line1;  
+		String Line2;
+		String Line3;
+		// These three strings will hold the first three lines of input
+		
+		String NumberOfLines;  
+		//This String holds the number of lines which is 3(input line 1)
+		
+		NumberOfLines = in.readLine(); //The Strings are given their input lines which they will hold
+		Line1 = in.readLine();
+		Line2 = in.readLine();
+		Line3 = in.readLine();
+		
+		String Dog = "woof";  
+		String Fish = "blub";
+		String Elephant = "toot";
+		String Seal = " ow";
+		String Cat = "wa";
+		String Student = "sleep";
+		String Teacher = "nuts";
+		String Russian = "hack";
+		//Strings contain certain sound of an animal which will then be used to remove from Line1, Line2, Line3
+		
+		Line1 = Line1.replaceAll(Dog, "").replace(Fish, "").replace(Elephant, "").replace(Seal, "").replace(Cat, "").replace(Student, "sleep").replace(Teacher, "").replace(Russian, "");
+		Line2 = Line2.replaceAll(Dog, "").replace(Fish, "").replace(Elephant, "").replace(Seal, "").replace(Cat, "").replace(Student, "sleep").replace(Teacher, "").replace(Russian, "");
+		Line3 = Line3.replaceAll(Dog, "").replace(Fish, "").replace(Elephant, "").replace(Seal, "").replace(Cat, "").replace(Student, "sleep").replace(Teacher, "").replace(Russian, "");
+		//  All three coded lines get other animal sounds replaced by nothing.
+		
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		System.out.println(in.readLine());
+		// Remaining input lines are printed out from input file
+		
+		System.out.println("The fox says: ");
+		System.out.println(Line1);
+		System.out.println(Line2);
+		System.out.println(Line3);
+		//  Decoded lines are printed out 
+		
+		//@author Charles Tapia
+		//The quite is "The best ideas make come as jokes make your thinking as funny as possible"  David Ogilvy
+	}
+
+}
